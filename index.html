@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drafted — Resume Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="glyph"></span>
+      <div>
+        <h1>Drafted</h1>
+        <span class="subtitle">Blueprint for your career</span>
+      </div>
+    </div>
+    <div class="topbar-controls">
+      <div class="toggle-group" id="templateToggle">
+        <button data-tmpl="modern" class="active">Modern</button>
+        <button data-tmpl="classic">Classic</button>
+      </div>
+      <div class="swatch-group" id="accentSwatches">
+        <span class="swatch selected" data-color="#2b6777" style="background:#2b6777"></span>
+        <span class="swatch" data-color="#8a3b3b" style="background:#8a3b3b"></span>
+        <span class="swatch" data-color="#4a5b8a" style="background:#4a5b8a"></span>
+        <span class="swatch" data-color="#6b6b3b" style="background:#6b6b3b"></span>
+        <span class="swatch" data-color="#1c1c1c" style="background:#1c1c1c"></span>
+      </div>
+      <button class="export-btn" id="exportBtn">Export PDF</button>
+    </div>
+  </div>
+</header>
+
+<main class="workspace">
+  <div class="editor-pane">
+
+    <div class="sec">
+      <div class="sec-head"><span class="tag">SEC.01</span><h2>Contact</h2></div>
+      <div class="field-row">
+        <div class="field"><label for="fName">Full name</label><input type="text" id="fName" placeholder="Jordan Ellis"></div>
+        <div class="field"><label for="fTitle">Headline</label><input type="text" id="fTitle" placeholder="Product Designer"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="fEmail">Email</label><input type="email" id="fEmail" placeholder="jordan@email.com"></div>
+        <div class="field"><label for="fPhone">Phone</label><input type="tel" id="fPhone" placeholder="(555) 012-3456"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="fLocation">Location</label><input type="text" id="fLocation" placeholder="Austin, TX"></div>
+        <div class="field"><label for="fWebsite">Website / LinkedIn</label><input type="text" id="fWebsite" placeholder="linkedin.com/in/jordanellis"></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head"><span class="tag">SEC.02</span><h2>Summary</h2></div>
+      <div class="field">
+        <textarea id="fSummary" placeholder="A short pitch — who you are, what you're good at, what you're looking for." rows="3"></textarea>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head"><span class="tag">SEC.03</span><h2>Experience</h2></div>
+      <div id="experienceList"></div>
+      <button class="add-btn" id="addExperience">+ Add position</button>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head"><span class="tag">SEC.04</span><h2>Education</h2></div>
+      <div id="educationList"></div>
+      <button class="add-btn" id="addEducation">+ Add school</button>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head"><span class="tag">SEC.05</span><h2>Skills</h2></div>
+      <div class="tag-input-row">
+        <input type="text" id="skillInput" placeholder="Type a skill and press Enter">
+        <button id="addSkillBtn">Add</button>
+      </div>
+      <div class="chips" id="skillChips"></div>
+    </div>
+
+  </div>
+
+  <div class="preview-pane">
+    <div class="page-frame">
+      <div class="crop tl"></div><div class="crop tr"></div><div class="crop bl"></div><div class="crop br"></div>
+      <div class="resume-page tmpl-modern" id="resumePage"></div>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
