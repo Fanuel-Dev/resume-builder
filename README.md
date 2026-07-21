@@ -16,7 +16,7 @@
 
 ### Split-Pane Workspace & Live Document Preview
 <!-- Replace this placeholder URL with your real cropped screenshot once uploaded to GitHub -->
-![Drafted Workspace Interface](https://raw.githubusercontent.com/yourusername/drafted/main/assets/screenshots/dashboard-preview.png)
+![Drafted Workspace Interface](resume.png)
 
 ### 🎥 Live Studio Walkthrough
 > **Watch Drafted in action:** Click the workspace preview below to see real-time DOM hydration, layout style switching (`MODERN` / `CLASSIC`), accent color swatches, and instant PDF compilation.
